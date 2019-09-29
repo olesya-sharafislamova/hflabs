@@ -6,7 +6,7 @@ class AppealHelper:
         self.app = app
 
 
-    def fill_username(self, fullname=u"Баширова", name=u"Анастасия", secondname=u"Сергеевна"):
+    def fill_username(self, fullname, name, secondname):
         wd = self.app.wd
         wd.find_element_by_id("fullname-surname").click()
         wd.find_element_by_id("fullname-surname").clear()
@@ -16,19 +16,19 @@ class AppealHelper:
         wd.find_element_by_id("fullname-patronymic").clear()
         wd.find_element_by_id("fullname-patronymic").send_keys(secondname)
 
-    def fill_phone(self, phone="+7916 235-98-74"):
+    def fill_phone(self, phone):
         wd = self.app.wd
         wd.find_element_by_id("phone").click()
         wd.find_element_by_id("phone").clear()
         wd.find_element_by_id("phone").send_keys(phone)
 
-    def fill_email(self, email="1@1.ru"):
+    def fill_email(self, email):
         wd = self.app.wd
         wd.find_element_by_id("email").click()
         wd.find_element_by_id("email").clear()
         wd.find_element_by_id("email").send_keys(email)
 
-    def fill_message(self, message=u"текст обращения"):
+    def fill_message(self, message):
         wd = self.app.wd
         wd.find_element_by_id("message").click()
         wd.find_element_by_id("message").clear()
